@@ -1,0 +1,15 @@
+.footer {
+    background-color: #252B48;
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+}
+
+.footerContainer {
+    max-width: 1370px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}

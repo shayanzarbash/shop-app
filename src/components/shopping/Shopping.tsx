@@ -31,7 +31,7 @@ export default function Shopping() {
 
     return (
         <>
-            <h2 className={styles.shoppingCartHeading}>SHOPPING CART</h2>
+            <h2 className={styles.shoppingCartHeading}>سبد خرید</h2>
             {calculateTotalPrice() === 0 ? (
                 <ZeroProduct />
             ) : (
@@ -64,7 +64,7 @@ export default function Shopping() {
                         </div>
                     ))}
                     <div className={styles.totalPriceDiv}>
-                        <span className={styles.left}>Total Price: </span>
+                        <span className={styles.left}>جمع کل: </span>
                         <span className={styles.dolar}>$</span>
                         <span className={styles.right}>{calculateTotalPrice()}</span>
                     </div>

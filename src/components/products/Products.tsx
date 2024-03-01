@@ -11,12 +11,11 @@ import { IProduct } from "../../libraries/product-type.ts";
 function Products() {
 
     const products = useSelector<IRootState, IProduct[]>(state => state.productsReducer.value);
-    console.log(products)
     const dispatch = useDispatch();
 
     return (
         <>
-            <h2 className={styles.flexRoot}>PRODUCTS</h2>
+            <h2 className={styles.flexRoot}>محصولات</h2>
             <div className={styles.flexRoot}>
                 <div className={styles.flexContainer}>
                     {products.length > 0 && products.map((eachProduct: IProduct, index: number) => {
@@ -32,13 +31,13 @@ function Products() {
                                         height={180}
                                     />}
                                 >
-                                    <h4>{eachProduct.title}</h4>
+                                    <h5>{eachProduct.title}</h5>
                                     <div className={styles.itemInfo}>
                                         <h3>
-                                            <span id="dolar-span">$</span>
+                                            <span>$</span>
                                             {eachProduct.price}
                                         </h3>
-                                        <ShoppingCartOutlined id="shopping-cart" onClick={() => dispatch(add(eachProduct))} />
+                                        <ShoppingCartOutlined onClick={() => dispatch(add(eachProduct))} />
                                     </div>
                                 </Card>
                             </React.Fragment>

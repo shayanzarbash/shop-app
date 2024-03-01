@@ -66,5 +66,4 @@ export const navbarSlice = createSlice({
 });
 
 export const { add, remove, removeOne } = navbarSlice.actions;
-
 export default navbarSlice.reducer;
